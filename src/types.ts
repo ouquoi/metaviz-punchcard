@@ -7,4 +7,6 @@ export type Settings = {
   encoding?: "intensity" | "size" | "both";
   colorLow?: string;
   colorHigh?: string;
+  showLegend?: boolean;
+  legendTitle?: string;
 };

@@ -13,6 +13,12 @@ export function lerpColor(a: string, b: string, t: number): string {
   return `rgb(${r},${g},${bl})`;
 }
 
+export function formatValue(v: number): string {
+  if (v >= 1_000_000) return `${(v / 1_000_000).toFixed(1)}M`;
+  if (v >= 1_000) return `${(v / 1_000).toFixed(1)}k`;
+  return v.toLocaleString();
+}
+
 export function isNumericCol(col: { base_type?: string }): boolean {
   return /Integer|Float|Decimal|BigInteger|Number/i.test(col.base_type ?? "");
 }

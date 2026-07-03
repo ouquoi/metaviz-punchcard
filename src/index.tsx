@@ -161,6 +161,22 @@ const createVisualization: CreateCustomVisualization<Settings> = ({ defineSettin
         getSection() { return "Appearance"; },
         getDefault() { return "#509EE3"; },
       }),
+
+      showLegend: defineSetting({
+        id: "showLegend",
+        title: "Show legend",
+        widget: "toggle",
+        getSection() { return "Appearance"; },
+        getDefault() { return true; },
+      }),
+
+      legendTitle: defineSetting({
+        id: "legendTitle",
+        title: "Legend title",
+        widget: "input",
+        getSection() { return "Appearance"; },
+        getDefault() { return ""; },
+      }),
     },
 
     VisualizationComponent: Punchcard,
